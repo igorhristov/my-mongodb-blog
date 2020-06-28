@@ -1,0 +1,23 @@
+{
+  "name": "tutorijal-blog-backend",
+  "version": "1.0.0",
+  "description": "backend for tutorija",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "npx nodemon --exec npx babel-node src/server.js"
+  },
+  "author": "Igor Hristov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.20"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "nodemon": "^2.0.4"
+  }
+}
