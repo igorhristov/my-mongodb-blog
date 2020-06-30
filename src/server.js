@@ -17,11 +17,7 @@ const ArticleSchema = new mongoose.Schema({
 });
 const Articles = mongoose.model('Article', ArticleSchema);
 
-mongoose.connect(
-    'mongodb+srv://tester:P2cEHncejcpRIvlo@cluster0-te9ss.mongodb.net/articles?retryWrites=true&w=majority',
-    { useUnifiedTopology: true, useNewUrlParser: true },
-    () => console.log('Connected to database!')
-);
+mongoose.connect(process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true });
 
 app.get('/api/articles', async (req, res) => {
     try {
